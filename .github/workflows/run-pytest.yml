@@ -3,6 +3,22 @@ name: Cinema Ticket Unit Tests
 
 on:
   push:
+    paths:
+      - "src/**"
+      - "tests/**"
+      - ".github/workflows/run-pytest.yml"
+
+  pull_request:
+    paths:
+      - "src/**"
+      - "tests/**"
+      - ".github/workflows/run-pytest.yml"
+
+  workflow_dispatch:
+
+concurrency:
+  group: cinema-tests-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
