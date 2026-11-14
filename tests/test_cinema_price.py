@@ -36,3 +36,6 @@ def test_invalid_ticket_type(ticket_count):
     # Act and Assert: Expect a TypeError
     with pytest.raises(TypeError):
         ticket_price(ticket_count)
+
+
+# Unit tests for cinema ticket pricing
