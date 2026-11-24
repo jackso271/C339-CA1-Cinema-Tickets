@@ -37,3 +37,4 @@ def test_invalid_age_type(age):
     # Act and Assert: Expect a TypeError
     with pytest.raises(TypeError):
         can_watch(age)
+
